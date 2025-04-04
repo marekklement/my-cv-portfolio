@@ -39,7 +39,7 @@
           <div
             v-for="(skill, index) in technicalSkills"
             :key="index"
-            :ref="el => { if (el) techSkillRefs[index] = el }"
+            :ref="el => { if (el) techSkillRefs[index] = el as HTMLElement }"
             class="bg-darkbg rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
           >
             <div class="flex justify-between items-center mb-3">
@@ -51,7 +51,7 @@
               <div
                 class="h-full bg-gradient-to-r from-primary to-secondary rounded-full"
                 :style="{ width: '0%' }"
-                :ref="el => { if (el) progressRefs[index] = el }"
+                :ref="el => { if (el) progressRefs[index] = el as HTMLElement }"
               ></div>
             </div>
 
@@ -192,18 +192,20 @@ onMounted(() => {
 
     if (cubeWrapperRef.value) {
       cubeWrapperRef.value.addEventListener('mousemove', (e) => {
-        const rect = cubeWrapperRef.value.getBoundingClientRect()
-        const centerX = rect.left + rect.width / 2
-        const centerY = rect.top + rect.height / 2
-        const rotateY = -((e.clientX - centerX) / 10)
-        const rotateX = (e.clientY - centerY) / 10
+        if (cubeWrapperRef.value) {
+          const rect = cubeWrapperRef.value.getBoundingClientRect()
+          const centerX = rect.left + rect.width / 2
+          const centerY = rect.top + rect.height / 2
+          const rotateY = -((e.clientX - centerX) / 10)
+          const rotateX = (e.clientY - centerY) / 10
 
-        gsap.to(cubeRef.value, {
-          rotateX: rotateX,
-          rotateY: rotateY,
-          duration: 0.5,
-          ease: 'power1.out'
-        })
+          gsap.to(cubeRef.value, {
+            rotateX: rotateX,
+            rotateY: rotateY,
+            duration: 0.5,
+            ease: 'power1.out'
+          })
+        }
       })
 
       cubeWrapperRef.value.addEventListener('mouseleave', () => {

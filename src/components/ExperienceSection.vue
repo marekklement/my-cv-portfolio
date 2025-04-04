@@ -11,7 +11,7 @@
         <div
           v-for="(job, index) in experience"
           :key="index"
-          :ref="el => { if (el) experienceRefs[index] = el }"
+          :ref="el => { if (el) experienceRefs[index] = el as HTMLElement }"
           class="mb-16 relative pl-8 md:pl-0"
         >
           <div class="md:hidden absolute left-0 top-0 bottom-0 w-px bg-primary/40"></div>
@@ -62,8 +62,8 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const experienceTitleRef = ref(null)
-const experienceRefs = reactive([])
+const experienceTitleRef = ref<HTMLElement | null>(null)
+const experienceRefs = reactive<(HTMLElement | null)[]>([])
 
 const experience = [
   {

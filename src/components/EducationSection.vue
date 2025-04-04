@@ -11,7 +11,7 @@
         <div
           v-for="(edu, index) in education"
           :key="index"
-          :ref="el => { if (el) educationRefs[index] = el }"
+          :ref="el => { if (el) educationRefs[index] = el as HTMLElement }"
           class="bg-darksurface p-6 rounded-lg shadow-lg border-l-4 border-primary"
         >
           <div class="text-lg text-primary font-medium mb-2">{{ edu.period }}</div>
@@ -32,8 +32,8 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 // References for animations
-const educationTitleRef = ref(null)
-const educationRefs = reactive([])
+const educationTitleRef = ref<HTMLElement | null>(null)
+const educationRefs = reactive<(HTMLElement | null)[]>([])
 
 // Education data
 const education = [

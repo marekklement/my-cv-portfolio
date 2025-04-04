@@ -37,11 +37,19 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, type Ref, ref } from 'vue'
 import gsap from 'gsap'
 
 // References for animations
-const projectsTitleRef = ref(null)
+const projectsTitleRef = ref<HTMLElement | null>(null)
+
+interface Project {
+  id: number
+  name: string
+  languages: string[]
+  imagePath: string
+  link: string
+}
 
 // Project data as a separate constant
 const PROJECTS_DATA = [
@@ -77,7 +85,7 @@ const PROJECTS_DATA = [
 
 // State for carousel
 const currentIndex = ref(0)
-const visibleProjects = ref([])
+const visibleProjects: Ref<Project[]> = ref([])
 const projectsToShow = 3
 
 // Functions

@@ -50,8 +50,8 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 // References for animations
-const aboutTitleRef = ref(null)
-const aboutContentRef = ref(null)
+const aboutTitleRef = ref<HTMLElement | null>(null)
+const aboutContentRef = ref<HTMLElement | null>(null)
 
 onMounted(() => {
   // About section animation
@@ -65,6 +65,7 @@ onMounted(() => {
     duration: 0.8
   })
 
+  if (!aboutContentRef.value) return
   gsap.from(aboutContentRef.value.children, {
     scrollTrigger: {
       trigger: aboutContentRef.value,

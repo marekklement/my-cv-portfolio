@@ -39,6 +39,10 @@
 <script setup lang="ts">
 import { onMounted, type Ref, ref } from 'vue'
 import gsap from 'gsap'
+import fired from '@/assets/images/fired.svg'
+import pp from '@/assets/images/pp.svg'
+import drmax from '@/assets/images/drmax.svg'
+import tt from '@/assets/images/tt.svg'
 
 // References for animations
 const projectsTitleRef = ref<HTMLElement | null>(null)
@@ -57,28 +61,28 @@ const PROJECTS_DATA = [
     id: 1,
     name: 'Co-Author',
     languages: ['Kotlin', 'Ktor', 'Vue', 'PostgreSQL'],
-    imagePath: '/src/assets/images/pp.svg', // Replace with your actual image path
+    imagePath: pp, // Replace with your actual image path
     link: 'https://www.firedapp.dev',
   },
   {
     id: 2,
     name: 'Co-Author',
     languages: ['Kotlin', 'Ktor', 'Spring', 'Vue', 'PostgreSQL'],
-    imagePath: '/src/assets/images/fired.svg', // Replace with your actual image path
+    imagePath: fired, // Replace with your actual image path
     link: 'https://www.firedapp.dev',
   },
   {
     id: 3,
     name: 'Contributor',
     languages: ['Kotlin', 'Spring', 'Go', 'Vue', 'MSSql', 'MongoDB', 'MySql'],
-    imagePath: '/src/assets/images/drmax.svg', // Replace with your actual image path
+    imagePath: drmax, // Replace with your actual image path
     link: 'https://www.drmax.eu/en/default',
   },
   {
     id: 4,
     name: 'Author',
     languages: ['Kotlin', 'Ktor', 'PostgreSQL'],
-    imagePath: '/src/assets/images/tt.svg', // Replace with your actual image path
+    imagePath: tt, // Replace with your actual image path
     link: 'https://github.com/marekklement/TourTip',
   },
 ]

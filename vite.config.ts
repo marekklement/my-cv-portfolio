@@ -12,7 +12,7 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
   ],
-  base: process.env.NODE_ENV === 'production' ? '/my-cv-portfolio/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/' : '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

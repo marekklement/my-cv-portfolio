@@ -36,7 +36,7 @@
           <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary p-1">
             <div class="bg-darkbg rounded-full w-full h-full flex items-center justify-center overflow-hidden">
               <img
-                src="../assets/images/mk.JPEG"
+                src="../assets/images/mk.jpg"
                 alt="Marek Klement"
                 class="w-full h-full object-cover"
               />

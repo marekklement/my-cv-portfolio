@@ -68,7 +68,7 @@ const experienceRefs = reactive<(HTMLElement | null)[]>([])
 const experience = [
   {
     period: '2024 - Present',
-    title: 'Tribe Development Leader',
+    title: 'Team Leader',
     company: 'Quanti s.r.o.',
     description: 'Design and development of web applications for the pharmaceutical industry. Leading a team that develops in Go, Kotlin and Vue.js.'
   },

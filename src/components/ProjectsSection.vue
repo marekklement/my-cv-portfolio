@@ -43,6 +43,7 @@ import fired from '@/assets/images/fired.svg'
 import pp from '@/assets/images/pp.svg'
 import drmax from '@/assets/images/drmax.svg'
 import tt from '@/assets/images/tt.svg'
+import tes from '@/assets/images/tes.png'
 
 // References for animations
 const projectsTitleRef = ref<HTMLElement | null>(null)
@@ -61,30 +62,37 @@ const PROJECTS_DATA = [
     id: 1,
     name: 'Co-Author',
     languages: ['Kotlin', 'Ktor', 'Vue', 'PostgreSQL'],
-    imagePath: pp, // Replace with your actual image path
+    imagePath: pp,
     link: 'https://www.firedapp.dev',
   },
   {
     id: 2,
     name: 'Co-Author',
     languages: ['Kotlin', 'Ktor', 'Spring', 'Vue', 'PostgreSQL'],
-    imagePath: fired, // Replace with your actual image path
+    imagePath: fired,
     link: 'https://www.firedapp.dev',
   },
   {
     id: 3,
     name: 'Contributor',
     languages: ['Kotlin', 'Spring', 'Go', 'Vue', 'MSSql', 'MongoDB', 'MySql'],
-    imagePath: drmax, // Replace with your actual image path
+    imagePath: drmax,
     link: 'https://www.drmax.eu/en/default',
   },
   {
     id: 4,
     name: 'Author',
     languages: ['Kotlin', 'Ktor', 'PostgreSQL'],
-    imagePath: tt, // Replace with your actual image path
+    imagePath: tt,
     link: 'https://github.com/marekklement/TourTip',
   },
+  {
+    id: 5,
+    name: 'Co-Author',
+    languages: ['Java', 'Angular', 'PostgreSQL'],
+    imagePath: tes,
+    link: 'https://obec-tesovice.cz/',
+  }
 ]
 
 // State for carousel

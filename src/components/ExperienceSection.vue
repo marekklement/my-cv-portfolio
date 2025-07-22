@@ -67,7 +67,7 @@ const experienceRefs = reactive<(HTMLElement | null)[]>([])
 
 const experience = [
   {
-    period: '2021 - 2024',
+    period: '2021 - Present',
     title: 'Software Developer',
     company: 'Quanti s.r.o.',
     description: 'Development of web applications for the pharmaceutical industry in Go, Kotlin and Vue.js. Later leading a team of developers.'

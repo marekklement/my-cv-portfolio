@@ -67,16 +67,10 @@ const experienceRefs = reactive<(HTMLElement | null)[]>([])
 
 const experience = [
   {
-    period: '2024 - Present',
-    title: 'Team Leader',
-    company: 'Quanti s.r.o.',
-    description: 'Design and development of web applications for the pharmaceutical industry. Leading a team that develops in Go, Kotlin and Vue.js.'
-  },
-  {
     period: '2021 - 2024',
     title: 'Software Developer',
     company: 'Quanti s.r.o.',
-    description: 'Development of web applications for the pharmaceutical industry in Go, Kotlin and Vue.js.'
+    description: 'Development of web applications for the pharmaceutical industry in Go, Kotlin and Vue.js. Later leading a team of developers.'
   },
   {
     period: '2020 - 2021',
@@ -85,7 +79,7 @@ const experience = [
     description: 'Development of web applications for the automotive industry in Java.'
   },
   {
-    period: '2016 - 2018',
+    period: '2017 - 2020',
     title: 'Junior Java Developer',
     company: 'BCV Solutions s.r.o.',
     description: 'Started my journey in software development as a Java developer for identity management company.'

@@ -44,6 +44,7 @@ import pp from '@/assets/images/pp.svg'
 import drmax from '@/assets/images/drmax.svg'
 import tt from '@/assets/images/tt.svg'
 import tes from '@/assets/images/tes.png'
+import vet from '@/assets/images/veterina.png'
 
 // References for animations
 const projectsTitleRef = ref<HTMLElement | null>(null)
@@ -92,6 +93,13 @@ const PROJECTS_DATA = [
     languages: ['Java', 'Angular', 'PostgreSQL'],
     imagePath: tes,
     link: 'https://obec-tesovice.cz/',
+  },
+  {
+    id: 6,
+    name: 'Co-Author',
+    languages: ['JavaScript', 'Hugo', 'Netlify'],
+    imagePath: vet,
+    link: 'https://veterinapaprsek.cz/',
   }
 ]
 
